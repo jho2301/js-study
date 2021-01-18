@@ -433,7 +433,7 @@ const b = [3, 4];
 
 ## 4. 참고
 
-[**Garbage Collection이란??**](https://velog.io/@younoah/JS-Flow-자바스크립트의-데이터-타입)
+**Garbage Collection이란??**
 
 > 참고
 >
@@ -458,4 +458,4 @@ Garbage Colletor 사용이 끝난 객체를 알아서 메모리 공간에서 지
 
 **추가**
 
-[자바스크립트의 메모리관리](
+[자바스크립트의 메모리관리](https://engineering.huiseoul.com/자바스크립트는-어떻게-작동하는가-메모리-관리-4가지-흔한-메모리-누수-대처법-5b0d217d788d)
