@@ -64,14 +64,16 @@ console.log()
 
 하나의 실행 컨텍스트는 아래의 구조로 구성되어있다.
 
+```
 - 실행컨텍스트
-	\- VariavleEnvironment
-	\- environmentRecord(snapshot)
-	\- outerEnvironmentReference(snapshot)
-	\- Lexical Environment
-	\- environmentRecord : 현재문맥의 식별자(hoisting)
-	\- outerEnvironmentReference : 외부 식별자(scope chain)
-	\- ThisBinding
+	- VariavleEnvironment
+		- environmentRecord(snapshot)
+		- outerEnvironmentReference(snapshot)
+	- Lexical Environment
+		- environmentRecord : 현재문맥의 식별자(hoisting)
+		- outerEnvironmentReference : 외부 식별자(scope chain)
+	- ThisBinding
+```
 
 
 
