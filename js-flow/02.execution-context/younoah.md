@@ -115,7 +115,7 @@ console.log()
 
 
 
-`Lexical Environment` 는 다시 2가지 객체로 나뉘어 일을 하게 된다.![img](https://media.vlpt.us/images/younoah/post/76fcd656-db9a-40c1-9cef-671aeab5f385/javascript1.png)
+`Lexical Environment` 는 다시 2가지 객체로 나뉘어 일을 하게 된다.
 
 
 
