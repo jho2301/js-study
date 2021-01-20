@@ -26,11 +26,11 @@ this binding은 실행 컨텍스트가 활성화 될 때 한다.
 
 ### 1. 전역공간에서 : window / global
 
+> 전역 공간에서 this는 브라우저 콘솔이면 window node.js면 global이 된다.
+
 ```javascript
 console.log(this);
 ```
-
-전역 공간에서 this는 브라우저 콘솔이면 window node.js면 global이 된다.
 
 
 
@@ -147,21 +147,9 @@ obj.b();
 
 
 
-
-
 ### 함수 호출 메서드 : call, apply, bind
 
-- 기본적으로는 함수의 this와 같다. (window/ global)
-
-- 제어권을 가진 함수가 callback의 this를 명시한 경우 그에 따른다. (call, apply)
-
-- 개발자가 this를 바인딩한 채로 callback을 넘기면 그에 따른다. (bind)
-
-
-
-**함수 호출 메서드 : call, apply, bind**
-
-함수를 호출할때 this를 변경하고 인자를 전달하면서 호출을 돕는다.
+> 함수를 호출할때 this를 변경하고 인자를 전달하면서 호출을 돕는다.
 
 - call
 
@@ -217,7 +205,11 @@ d(3);
 
 ## 4.callback 호출시 : 기본적으로 함수 호출시와 동일
 
+- 기본적으로는 함수의 this와 같다. (window/ global)
 
+- 제어권을 가진 함수가 callback의 this를 명시한 경우 그에 따른다. (call, apply)
+
+- 개발자가 this를 바인딩한 채로 callback을 넘기면 그에 따른다. (bind)
 
 #### 예제1
 
