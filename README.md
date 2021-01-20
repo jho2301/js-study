@@ -20,7 +20,6 @@ js 개념에 대해 학습하고, 배운 내용을 공유합니다.
 ## 멤버
 - [jho2301](https://github.com/jho2301)
 - [younoah](https://github.com/younoah)
-- [Two-Jay](https://github.com/Two-Jay)
 - [dudtjr913](https://github.com/dudtjr913)
 
 
