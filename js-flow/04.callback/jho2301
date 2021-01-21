@@ -1,0 +1,23 @@
+![](https://images.velog.io/images/fan/post/6d22c5ac-7cb0-4ca4-bd4d-7b0bf01194ce/image.png)
+
+## what is callback function?
+![](https://images.velog.io/images/fan/post/6c6d7ee8-7271-4c18-872c-ee27d738b13d/image.png)
+> 함수(A)를 인자로 전달하면, 전달받은 함수(B)가 인자로 받은 함수(A)를 호출해서 결과를 **회신**한다.
+
+## ≒ 함수의 제어권을 맡긴다.
+### 어떤 제어권을 맡기는가
+1. **실행시점**의 제어권
+	- ex) setTimeout(**callback**, millisecond)
+    - 전달받은 값(millisecond)만큼 callback함수의 실행을 지연한다.
+2. **인자**의 제어권
+	- ex)Array.forEach(**callback**)
+    - callback함수를 forEach메서드가 호출할 때 순서대로 currentValue, index, array 인자를 전달한다.
+3. **this**의 제어권
+	- ex) EventTarget.addEventListener(type, **callback**)
+    - 콜백함수의 this는 *전역객체*가 아닌 이벤트가 발생한 타겟엘리먼트가 된다.
+    
+## 정리
+
+ 1. 함수의 인자로 콜백함수를 전달하면, 콜백함수를 전달 받은 함수가 콜백함수의 제어권을 얻는다.
+ 2. 특별한 요청 (ex. bind())이 없는 한, 전달 받는 함수가 정한 방식으로 콜백함수를 호출한다.
+ 3. 콜백함수는 메서드가 아닌 **함수**다. 인자로 전달하는 것은 호출 결과가 아닌 함수의 레퍼런스.
