@@ -23,7 +23,7 @@ ES6이전에 자바스크립트에는 클래스라는 개념이 없었다. 그�
 
 ### 프로토타입
 
-![2021-01-23_19-22-47](/Users/uno/Desktop/2021-01-23_19-22-47.png)
+![proto1](https://user-images.githubusercontent.com/41064875/105576317-469ba000-5db5-11eb-8800-2f5e46596c44.png)
 
 - 생성자 함수(Constructor)에는 프토로타입(Prototype)이라는 객체가 존재한다.
 
@@ -71,7 +71,7 @@ INSTANCE.constructor
 
 ### 프로토타입 체이닝
 
-![2021-01-23_19-43-18](/Users/uno/Desktop/2021-01-23_19-43-18.png)
+![proto2](https://user-images.githubusercontent.com/41064875/105576314-43081900-5db5-11eb-9b65-75b06adbf0d8.png)
 
 
 
