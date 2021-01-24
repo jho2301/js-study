@@ -72,7 +72,7 @@ static 메서드를 사용하려면 static 키워드를 사용하여야 한다.
 
 ### 클래스(생성자함수) 상속
 
-![class](/Users/uno/Desktop/class.png) 
+![class](https://user-images.githubusercontent.com/41064875/105627925-0acc0d80-5e7d-11eb-82fa-3068c4ea69db.png)
 
 Bridge는 중간다리 역할을 한다. 상속하는 객체의 프로퍼티를 참조하지 않기위해 사용한다.
 
@@ -108,7 +108,7 @@ Bridge를 중간에 두지 않고 한번에 상속하면 상속하는 생성자 
 
 이 귀찮은 과정이 자바스크립트 내부 함수로 구현되어있다.
 
-![class2](/Users/uno/Desktop/class2.png)
+![class2](https://user-images.githubusercontent.com/41064875/105627932-0ef82b00-5e7d-11eb-9f3e-56f52fd67d3e.png)
 
 
 
