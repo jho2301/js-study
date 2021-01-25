@@ -18,7 +18,7 @@ ex) for 문은 문장, map 함수는 일급
 - 함수를 값으로 다루는 함수
 
 #### 함수를 인자로 받아서 실행하는 함수 (인자 = 콜백 함수)
-```
+```javascript
 const apply3 = f => f(3);
 const add10 = a => a + 10;
 console.log(apply3(add10)); // 13
@@ -32,7 +32,7 @@ const times = (f, n) => {
 times((a) => console.log(a + 10), 3); // 11 12 13
 ```
 #### 함수를 만들어 리턴하는 함수 (클로저를 만들어 리턴하는 함수)
-```
+```javascript
 const addMaker = a => b => a+b
 const add1 = addMaker(1) // addMaker의 a에 1이 할당된 상태이고 이것이 클로저이다.
 console.log(add1(2)) // 3
@@ -40,7 +40,7 @@ console.log(add1(2)) // 3
 
 ## ES6에서의 리스트 순회
 - for of
-```
+```javascript
 const list = [1,2,3];
 for (const value of list) {
   console.log(value);
@@ -50,21 +50,21 @@ for (const value of list) {
 
 ---
 ### Array 순회
-```
+```javascript
 const arr = [1, 2, 3];
 for (const value of arr) {
   console.log(value); // 1 2 3
 }
 ```
 ### Set 순회
-```
+```javascript
 const set = new Set([1, 2, 3]);
 for (const value of set) {
   console.log(value); // 1 2 3
 }
 ```
 ### Map 순회
-```
+```javascript
 const map = new Map([
   ['a', 1],
   ['b', 2],
@@ -88,7 +88,7 @@ Array 순회를 보면 arr[0]과 같이 순회를 할 것 같다고 생각이 �
 
 ### Symbol.iterator
 위의 코드를 Symbol.iterator로 확인해보면 다음과 같은 결과를 볼 수 있다.
-```
+```javascript
 console.log(arr[Symbol.iterator]); // ƒ values() { [native code] }
 console.log(set[Symbol.iterator]); //ƒ values() { [native code] }
 console.log(map[Symbol.iterator]); ƒ entries() { [native code] }
@@ -99,7 +99,7 @@ console.log(map[Symbol.iterator]); ƒ entries() { [native code] }
 - 이터러블: 이터레이터를 리턴하는 Symbol.iterator()를 가진 값(Symbol.iterator 메소드를 가지고 있는 객체)
 - 이터레이터 : { value, done } 객체를 리턴하는 next()를 가진 값(Symbol.iterator 메소드를 실행한 값)
 - 이터러블/이터레이터 프로토콜: 이터러블을 for...of, 전개 연산자 등과 함께 동작하도록 한 규약
-```
+```javascript
 const arrIterator = arr[Symbol.iterator]();
 arrIterator.next(); // {value: 1, done: false}
 arrIterator.next(); // {value: 2, done: false}
@@ -122,7 +122,7 @@ mapIterator.next(); // {value: undefined, done: true}
 이를 통해 for of문은 이터레이터의 value를 출력하다가 done: true가 되었을 때 멈춘다는 것을 알 수 있다.<br>
 여기에서 map의 경우에 key만 얻어오고 싶다면 keys() 메소드를 사용할 수 있다. 또한, value만 얻어오고 싶다면 <br>
 values() 메소드를 사용할 수 있다.
-```
+```javascript
 const mapKeyIterator = map.keys();
 mapKeyIterator.next(); // {value: "a", done: false}
 mapKeyIterator.next(); // {value: "b", done: false}
@@ -136,7 +136,7 @@ for (const value of map.values()) {
 
 ### 사용자 정의 이터러블/이터레이터
 우선, 이터러블을 만들어보자.
-```
+```javascript
 const iterable = {
   [Symbol.iterator]() {
     let i = 3;
@@ -151,7 +151,7 @@ const iterable = {
 iterable은 위에서 설명했듯이 Symbol.iterator() 메소드를 가지고 있는 객체이다.<br>
 따라서 Symbol.iterator() 메소드를 실행하면 next() 메소드를 사용할 수 있게 된다.<br>
 
-```
+```javascript
 const iterator = iterable[Symbol.iterator]();
 iterator.next(); // {value: 3, done: false}
 iterator.next(); // {value: 2, done: false}
@@ -159,13 +159,13 @@ iterator.next(); // {value: 1, done: false}
 iterator.next(); // {done: true}
 ```
 또한 for of문으로도 순회 가능하다.
-```
+```javascript
 for (const value of iterable) {
   console.log(value);
 } // 3 2 1
 ```
 하지만 iterator을 순회하면 오류가 발생한다.
-```
+```javascript
 for (const value of iterator) {
   console.log(value);
   // Uncaught TypeError: iterator is not iterable
@@ -178,7 +178,7 @@ for of문은 Symbol.iterator()의 next 메소드를 실행하여 그 결과인 v
 따라서 이터러블이 아니라고 판단해 오류가 발생하는 것이다.
 
 그래서 필요한 것이 항상 자기 자신을 return해주어 이터레이터로 만들어주는 것이다.
-```
+```javascript
 const iterable = {
   [Symbol.iterator]() {
     let i = 3;
@@ -204,12 +204,12 @@ for (const value of iterator) {
 
 ### 전개 연산자
 전개 연산자도 이터러블이 동일하게 적용된다.
-```
+```javascript
 const arr = [1, 2, 3];
 console.log([...arr, ...[4, 5]]) // [1, 2, 3, 4, 5]
 ```
 여기에서도 역시 Symbol.iterator를 없애주면 작동하지 않는다.
-```
+```javascript
 const arr = [1, 2, 3];
 arr[Symbol.iterator] = null;
 console.log([...arr, ...[4, 5]]) // arr is not iterable
