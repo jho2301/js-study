@@ -177,7 +177,7 @@ for of문은 Symbol.iterator()의 next 메소드를 실행하여 그 결과인 v
 작성한 코드대로 보면 iterator은 next 메소드만 가지고 있다.<br>
 따라서 이터러블이 아니라고 판단해 오류가 발생하는 것이다.
 
-그래서 필요한 것이 항상 자기 자신을 return해주어 이터러블로 만들어주는 것이다.
+그래서 필요한 것이 항상 자기 자신을 return해주어 이터레이터로 만들어주는 것이다.
 ```
 const iterable = {
   [Symbol.iterator]() {
