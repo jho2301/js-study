@@ -173,9 +173,11 @@ function* createAnswerNumber(numberArray, count) {
 
     if (!answer.includes(randomNumber)) {
       answer.push(randomNumber);
-      yield answer;
+      yield randomNumber;
     }
   }
+
+  yield answer;
 }
 
 const answer = getAnswerNumber([1, 2, 3, 4, 5, 6, 7, 8, 9], 5);
