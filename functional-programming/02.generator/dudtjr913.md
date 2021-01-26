@@ -11,7 +11,7 @@ function* generator() {
 
 const iterator = generator();
 log(iterator[Symbol.iterator]); // ƒ [Symbol.iterator]() { [native code] }
-log(iterator[Symbol.iterator]() === iterator); // true
+log(iterator[Symbol.iterator]() === iterator); // true => well-formed iterator
 log(iterator.next()); // {value: 1, done: false}
 log(iterator.next()); // {value: 2, done: false}
 log(iterator.next()); // {value: 3, done: false}
