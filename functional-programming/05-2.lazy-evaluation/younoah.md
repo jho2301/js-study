@@ -30,7 +30,7 @@ go(L.range(10),
 
 순서는 아래와 같다.
 
-![strict-eval](/Users/uno/Desktop/strict-eval.png)
+![strict-eval](https://user-images.githubusercontent.com/41064875/106350705-4d2c9900-631a-11eb-964c-28150e224451.png)
 
 
 
@@ -44,7 +44,7 @@ go(L.range(10),
 
 순서는 아래와 같다.
 
-![lazy-eval](/Users/uno/Desktop/lazy-eval.png)
+![lazy-eval](https://user-images.githubusercontent.com/41064875/106350704-4c940280-631a-11eb-98ea-4e03516f1048.png)
 
 (이미지 출처: https://opentogether.tistory.com/72)
 
@@ -62,7 +62,7 @@ go(L.range(10),
 
 
 
-![combination](/Users/uno/Desktop/combination.png)
+![combination](https://user-images.githubusercontent.com/41064875/106350703-4aca3f00-631a-11eb-8a37-22d28db9b7d7.png)
 
 (이미지 출처: https://opentogether.tistory.com/72)
 
