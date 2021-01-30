@@ -32,7 +32,7 @@ go(L.range(10),
 
 ![strict-eval](https://user-images.githubusercontent.com/41064875/106350705-4d2c9900-631a-11eb-964c-28150e224451.png)
 
-
+(이미지 출처: https://opentogether.tistory.com/72)
 
 #### 지연 평가
 
